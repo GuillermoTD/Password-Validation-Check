@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  list-style: none;
+}
+:root {
+  --bg: #8cccff;
+  --color1: #376488;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.box {
+  position: relative;
+  width: 30rem;
+}
+
+.box .inputBox {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+}
+
+.box .inputBox input {
+  position: relative;
+  width: 100%;
+  border: none;
+  padding: 10px 5px;
+}
+
+.box .inputBox #toggleIcon {
+  position: absolute;
+  top: 8px;
+  right: 1.06rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.box .inputBox #toggleIcon::before {
+  content: "\f06e";
+  font-family: fontAwesome;
+}
+
+.box .inputBox #toggleIcon:hover {
+  background: #0001;
+}
+
+.box .inputBox #toggleIcon.hide {
+  background: #0008;
+}
+
+.box .inputBox #toggleIcon.hide::before {
+  content: "\f070";
+  font-family: fontAwesome;
+}
+
+.validation {
+  background: var(--color1);
+  width: 100%;
+  height: 100%;
+  margin-top: 1.6rem;
+  border-radius: 0.6rem;
+  padding: 1.5rem;
+  color: #fff;
+}
+
+.validation ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.validation ul li {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  transition: 0.5s ease;
+  font-size: 0.85em;
+}
+
+.validation ul li::before {
+  content: "\f192";
+  width: 20px;
+  height: 10px;
+  font-family: fontAwesome;
+  display: inline-flex;
+}
+
+.validation ul li.validate::before {
+  content: "\f00c";
+  font-family: fontAwesome;
+  color: #0f0;
+}
+
+.validation ul li.validate::before .validation ul li {
+  text-decoration: line-through;
+}

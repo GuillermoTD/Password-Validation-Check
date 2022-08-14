@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div id="app" class="box">
+      <div class="inputBox">
+        <input type="password" id="password" placeholder="Password" />
+        <span id="toggleIcon"> </span>
+      </div>
+      <div class="validation">
+        <ul>
+          <li class="lower">At least one lowercase character</li>
+          <li class="upper">At least one uppercase character</li>
+          <li class="number">At least one number</li>
+          <li class="special">At least one speacial character</li>
+          <li class="length">At least 8 characters</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./src/index.js"></script>
+  </body>
+</html>
